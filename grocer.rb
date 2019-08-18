@@ -16,13 +16,11 @@ def consolidate_cart(cart)
 end
 
 def apply_coupons(cart, coupons)
-  
-  hash={}
-  cart.each do |item, index|
-   coupons.each do |coupon|
+  coupons.each do |coupon|
   #binding.pry 
-   if coupon[:item]==item
-   hash["#{item} W/COUPON"] = {count: coupon[:num], price: coupon[:cost]/coupon[:num],
+  if cart.key.include?
+  
+   ["#{item} W/COUPON"] = {count: coupon[:num], price: coupon[:cost]/coupon[:num],
   clearance: cart[coupon[:item]][:clearance]}
     end 
    end
