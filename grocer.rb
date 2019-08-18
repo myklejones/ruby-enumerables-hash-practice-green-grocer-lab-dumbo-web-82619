@@ -35,7 +35,7 @@ cart[coupon[:item]][:count]-=coupon[:num]
 
 def apply_clearance(cart)
   cart.keys.each |item|
-if cart[:clearance]
+if cart[item][:clearance]
   cart
 end
 
