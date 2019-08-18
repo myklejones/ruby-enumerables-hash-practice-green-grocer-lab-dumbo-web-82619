@@ -39,6 +39,8 @@ if cart[item][:clearance]
   cart[item][:price]=(cart[item][:price]*.20)
  end
 end
+cart
+end
 
 def checkout(cart, coupons)
   # code here
