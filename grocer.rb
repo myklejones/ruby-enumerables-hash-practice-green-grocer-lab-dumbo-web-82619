@@ -26,11 +26,11 @@ def apply_coupons(cart, coupons)
         cart[:name]={count: coupon[:num], price: coupon[:cost]/coupon[:num],
   clearance: cart[coupon[:item]][:clearance]}
 end
-cart[coupon[:item]][:count]-=
+cart[coupon[:item]][:count]-=coupon[:num]
     end 
    end
   end
-  hash
+  
  end
 
 def apply_clearance(cart)
