@@ -34,7 +34,8 @@ cart[coupon[:item]][:count]-=coupon[:num]
  end
 
 def apply_clearance(cart)
-  # code here
+if cart[:clearance]
+  cart
 end
 
 def checkout(cart, coupons)
