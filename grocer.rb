@@ -41,6 +41,7 @@ if cart[item][:clearance]
    cart
  end
  end
+ end
 
 def checkout(cart, coupons)
   # code here
