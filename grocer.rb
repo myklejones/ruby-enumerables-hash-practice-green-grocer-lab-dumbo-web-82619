@@ -19,6 +19,7 @@ def apply_coupons(cart, coupons)
   coupons.each do |coupon|
   #binding.pry 
   if cart.keys.include? coupon[:item]
+    if cart[coupon[:item]]
   
    ["#{item} W/COUPON"] = {count: coupon[:num], price: coupon[:cost]/coupon[:num],
   clearance: cart[coupon[:item]][:clearance]}
