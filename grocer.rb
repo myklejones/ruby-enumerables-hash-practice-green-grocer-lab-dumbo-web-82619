@@ -37,6 +37,7 @@ def apply_clearance(cart)
   cart.keys.each |item|
 if cart[item][:clearance]
   cart[item][:price]=(cart[item][:price]*.20)
+ end
 end
 
 def checkout(cart, coupons)
