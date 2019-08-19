@@ -46,5 +46,6 @@ if cart[item][:clearance]
 
 def checkout(cart, coupons)
   consolidate_cart
-  
+  apply_coupons
+  apply_clearance
 end
