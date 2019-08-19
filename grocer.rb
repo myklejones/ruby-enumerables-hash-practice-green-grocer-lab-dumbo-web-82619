@@ -50,5 +50,5 @@ def checkout(cart, coupons)
   apply_clearance
   total=0.0 
   apply_clearance.keys.each do |item|
-    
+    total+=apply_clearance[:price]*apply_coupons
 end
