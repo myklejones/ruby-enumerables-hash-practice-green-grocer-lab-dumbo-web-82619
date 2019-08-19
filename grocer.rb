@@ -45,9 +45,10 @@ if cart[item][:clearance]
  
 
 def checkout(cart, coupons)
-  consolidate=consolidate_cart
-  coupons=apply_coupons
- clearance= apply_clearance
- total=0.0
- 
+  consolidate_cart
+  apply_coupons
+  apply_clearance
+  total=0.0 
+  apply_clearance.keys.each do |item|
+    
 end
