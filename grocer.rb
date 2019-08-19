@@ -34,7 +34,7 @@ cart[coupon[:item]][:count]-=coupon[:num]
  end
 
 def apply_clearance(cart)
-  cart.each do |item|
+  cart.keys.each do |item|
 if cart[item][:clearance]
   
   cart[item][:price] =(cart[item][:price])- (cart[item][:price]*0.20)
@@ -49,7 +49,7 @@ def checkout(cart, coupons)
   coupons = apply_coupons(consolidate,coupons)
   discounts = apply_clearance(discounts)
   total=0.0 
-  discounts.each do |item|
+  discounts.keys.each do |item|
     total+=discounts[item][:price]*coupons[item][:count]
   end
    if  total > 100.00 
