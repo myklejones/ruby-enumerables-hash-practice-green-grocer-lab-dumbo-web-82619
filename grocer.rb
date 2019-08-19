@@ -51,7 +51,7 @@ def checkout(cart, coupons)
   
   total=0.0 
   discounts.keys.each do |item|
-    total+=discounts[item][:price]*coupons[item][:count]
+    total += discounts[item][:price ]*coupons_added[item][:count]
   end
    if  total > 100.00 
      (total)-(total*0.10)
