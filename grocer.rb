@@ -44,16 +44,16 @@ if cart[item][:clearance]
  end
  
 
-def checkout(cart, coupons)
-  consolidate =consolidate_cart(cart)
-  coupons = apply_coupons(consolidate,coupons)
-  discounts = apply_clearance(discounts)  
+#def checkout(cart, coupons)
+ # consolidate =consolidate_cart(cart)
+ # coupons = apply_coupons(consolidate,coupons)
+#  discounts = apply_clearance(discounts)  
   
-  total=0.0 
-  discounts.keys.each do |item|
-    total+=discounts[item][:price]*coupons[item][:count]
-  end
-   if  total > 100.00 
-     (total)-(total*0.10)
-   end
-end
+ # total=0.0 
+ #   total+=discounts[item][:price]*coupons[item][:count]
+ # end
+  # if  total > 100.00 
+   #  (total)-(total*0.10)
+  # end
+#end
+
